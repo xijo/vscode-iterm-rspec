@@ -1,0 +1,63 @@
+{
+	"name": "rspec-iterm",
+	"displayName": "rspec-iterm",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/xijo/vscode-rspec-iterm"
+	},
+	"publisher": "xijo",
+	"description": "Execute rspec in iterm for a given file",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.39.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.runAll",
+		"onCommand:extension.runAgain",
+		"onCommand:extension.runCurrent"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "rspec-iterm",
+			"properties": {
+				"rspec-iterm.runInForeground": {
+					"type": "boolean",
+					"default": false,
+					"description": "Run rspec command in foreground (switch to iterm on activation)."
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "extension.runAll",
+				"title": "rspec-iterm: Run all"
+			},
+			{
+				"command": "extension.runAgain",
+				"title": "rspec-iterm: Run again"
+			},
+			{
+				"command": "extension.runCurrent",
+				"title": "rspec-iterm: Run current line"
+			}
+		]
+	},
+	"scripts": {
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^10.12.21",
+		"@types/vscode": "^1.39.0",
+		"eslint": "^5.13.0",
+		"glob": "^7.1.4",
+		"mocha": "^6.1.4",
+		"typescript": "^3.3.1",
+		"vscode-test": "^1.0.2"
+	}
+}
