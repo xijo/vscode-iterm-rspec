@@ -11,7 +11,7 @@ function activate(context) {
 	let runAgainCommand = vscode.commands.registerCommand('extension.runAgain', runAgain)
 	context.subscriptions.push(runAgainCommand)
 
-	let runCurrentCommand = vscode.commands.registerCommand('extension.runAgain', runCurrent)
+	let runCurrentCommand = vscode.commands.registerCommand('extension.runCurrent', runCurrent)
 	context.subscriptions.push(runCurrentCommand)
 }
 exports.activate = activate
