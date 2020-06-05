@@ -1,6 +1,5 @@
 const vscode = require('vscode')
 const {exec} = require('child_process')
-const {basename} = require('path')
 
 let lastCommand
 
@@ -17,7 +16,7 @@ function activate(context) {
 exports.activate = activate
 
 function runAll() {
-	executeCommand(buildCommand(`bundle exec rspec ${getFilePath()}`))
+	executeCommand(buildCommand(`${rspecCommand()} ${getFilePath()}`))
 }
 
 function runAgain() {
@@ -30,7 +29,7 @@ function runAgain() {
 
 function runCurrent() {
 	let line = vscode.window.activeTextEditor.selection.active.line
-	executeCommand(buildCommand(`bundle exec rspec ${getFilePath()}:${line}`))
+	executeCommand(buildCommand(`${rspecCommand()} ${getFilePath()}:${line}`))
 }
 
 // Try to return relative file path, fallback to full qualified.
@@ -67,4 +66,8 @@ function buildCommand(code) {
 
 function executeCommand(command) {
 	exec(command)
+}
+
+function rspecCommand() {
+	return vscode.workspace.getConfiguration('rspec-iterm').get('rspecCommand');
 }
