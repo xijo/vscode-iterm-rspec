@@ -4,6 +4,9 @@ All notable changes to the "iterm-rspec" extension will be documented in this fi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## 0.1.0
+- configure rspec command
+
 ## [Unreleased]
 
 - Initial release
