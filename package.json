@@ -28,6 +28,11 @@
 					"type": "boolean",
 					"default": false,
 					"description": "Run rspec command in foreground (switch to iterm on activation)."
+				},
+				"rspec-iterm.rspecCommand": {
+					"type": "string",
+					"default": "bundle exec rspec",
+					"description": "Rspec command to use, default: `bundle exec rspec`"
 				}
 			}
 		},
