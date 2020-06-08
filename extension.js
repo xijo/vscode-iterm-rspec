@@ -28,7 +28,7 @@ function runAgain() {
 }
 
 function runCurrent() {
-	let line = vscode.window.activeTextEditor.selection.active.line
+	let line = vscode.window.activeTextEditor.selection.active.line + 1
 	executeCommand(buildCommand(`${rspecCommand()} ${getFilePath()}:${line}`))
 }
 
