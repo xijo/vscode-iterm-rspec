@@ -7,7 +7,7 @@
 	},
 	"publisher": "xijo",
 	"description": "Execute rspec in iterm for a given file",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"engines": {
 		"vscode": "^1.55.0"
 	},
